@@ -12,7 +12,7 @@ for (let i = 100; i <= 200; i++) {
 }
 */
 
-function loopyLighthouse(range, multiples, words){
+/* function loopyLighthouse(range, multiples, words){
   for (let i = range[0]; i <= range[1]; i++) {
     if ((i % multiples[0] === 0) && (i % multiples[1] === 0)){
       console.log(words[0] + words[1]);
@@ -23,6 +23,26 @@ function loopyLighthouse(range, multiples, words){
     } else {
       console.log(i);
     }
+  }
+
+} */
+
+function loopyLighthouse(range, multiples, words){
+  for (let i = range[0]; i <= range[1]; i++) {
+    let result = '';
+    if (i % multiples[0] === 0) {
+      //console.log(words[0]);
+      result += words[0];
+    }
+    if (i % multiples[1] === 0) {
+      //console.log(words[1]);
+      result += words[1];
+    }
+    if (result === '') {
+      //console.log(i);
+      result = i;
+    }
+    console.log(result);
   }
 
 }
